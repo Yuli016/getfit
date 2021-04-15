@@ -3,8 +3,8 @@
 }
 
 .card {
-  border-top: red solid 8px;
-  border-bottom: red solid 8px;
+  border-top: #6c8cbf solid 8px;
+  border-bottom: #6c8cbf solid 8px;
 }
 
 .cols {
@@ -34,7 +34,7 @@
 }
 
 a.action {
-  background: #d71515;
+  background: #6c8cbf;
   border: 2px solid #ffffff;
   border-radius: 1000px;
   padding: 15px 35px;
@@ -42,7 +42,7 @@ a.action {
   color: #ffffff;
   display: inline-block;
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media screen and (min-width: 320px) {
@@ -82,6 +82,7 @@ p.card-info {
 h4.activity {
   line-height: 150%;
   font-size: 28px;
+  color: black;
 }
 
 @media screen and (max-width: 801px) {
@@ -94,4 +95,12 @@ h4.activity {
   h4.activity {
     font-size: 30px;
   }
+}
+
+a.activity {
+  color: #5aa7a7;
+}
+
+a.activity:hover {
+  color: #6c8cbf;
 }

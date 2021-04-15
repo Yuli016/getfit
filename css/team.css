@@ -10,6 +10,7 @@ html {
 @media screen and (min-width: 601px) {
   .info {
     font-size: 23px;
+    color: black
   }
 }
 
@@ -36,6 +37,7 @@ h2.name {
   text-align: center;
   padding: 5px;
   text-decoration: underline #6c8cbf 2px;
+  color: black
 }
 
 .column {
