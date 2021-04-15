@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Endurance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/wavy.css">
+    <link rel="stylesheet" href="css/hide-show.css">
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <script src="js/workout.js" defer></script>
+    <script src="js/time.js" defer></script>
+    <script src="js/fade.js" defer></script>
+    <script src="js/timer.js" defer></script>
+  </head>
+  <body>
+
+    <div class="bar">
+      <a href="./homepage.html">Home</a>
+      <a href="./bmi.html">BMI</a>
+      <div class="dropbox">
+        <button class="dropbtn">Workouts</button>
+          <div class="dropbox-content">
+            <a href="./balance.html">Balance</a>
+            <a href="./strength.html">Strength</a>
+            <a href="./flexibility.html">Flexibility</a>
+            <a href="./endurance.html">Endurance</a>
+          </div>
+      </div>
+      <a href="./about-us.html">About Us</a>
+    </div>
+
+    <div class="top-large-img">
+      <div class="top-right"><span id="time"></span></div>
+      <img class="background-img" src="img/header-workouts-endurance.png">
+    </div>
+
+    <div class="custom-shape-divider-top-1616804317">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="center-box">
+        <h1>Benfits</h1>
+        <p data-aos="fade-up">Endurance is an important aspect for one’s physical
+        health. The body’s overall endurance dictates how long it is able to
+        withstand physical activity for a period of time. One can improve their
+        endurance though specific exercises. Endurance training is generally
+        related to aerobic exercises. These are exercises that require lots of
+        moving and breathing, like running or swimming. There are many benefits
+        with having good endurance. One benefit is having more energy for daily
+        activities. With endurance training, one will feel less winded from physical
+        activity. It also prompts good cardiovascular health. The breathing and
+        increase in blood flow works wonders for the body. Endurance exercises
+        are also some of the most effective ways to lose weight. These exercises
+        increase one’s metabolism, which results in the body burning more calories.
+        Endurance training is also good at preventing and controlling diabetes.
+        These exercises help keep our glucose levels within a safe count. With
+        all of these benefits, some of these simple exercises can do wonders
+        for one’s body.</p><br>
+
+        <h5>Input the time in minutes</h5>
+  	    <div id="inputArea"></div>
+  		    <h2 id="timer">0:00</h2>
+
+      <h3>Select Workout Difficulty</h3><br>
+      <div class="buttons">
+        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+      </div><br><br>
+
+      <div id="beginner"><!--beginner Div Start -->
+        <h3 data-aos="fade-up">Exercise 1 (Beginner): Walking and Jogging</h3>
+        <p data-aos="fade-up">Walking or jogging are some of the most popular
+        ways to exercise and increase endurance. Both walking and jogging are
+        effective for improving endurance, the choice of which to do is really
+        up to the individual. This activity can be achieved by going outside or
+        utilizing a treadmill. While doing these activities, it is recommended
+        to have good running shoes and to dress light/comfortably. These exercises
+        are great for having multiple ways of being executed.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Treadmill (Optional)</li>
+          <li data-aos="fade-up">Running Shoes</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Train three days a week.</li>
+          <li data-aos="fade-up">Jog or run/walk 20 to 30 minutes, two days a week.</li>
+          <li data-aos="fade-up">Take a longer run or run/walk (40 minutes to an hour) on the weekend.</li>
+          <li data-aos="fade-up">Rest or cross-train on your off days.</li>
+          <li data-aos="fade-up">Run at a conversational pace.</li>
+          <li data-aos="fade-up">Consider taking regular walk-breaks.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/l-7V2Eh5Kbk"></iframe>
+        </div>
+      </div><!--beginner Div End -->
+
+      <div id="moderate"><!--moderate Div Start -->
+        <h3 data-aos="fade-up">Exercise 2 (Moderate): Dancing</h3>
+        <p data-aos="fade-up">To many, dancing is a fun way to improve endurance.
+        Dancing is quite gentle on one’s body, meaning that they can do it for
+        long periods of time without feeling sore or fatigued.One can dance on
+        their own, with friends or even with some video games. Finding fun, high
+        speed music is a popular technique to help motivate one to dance. Games,
+        like Just Dance, are a great way to start if one is self conscious.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Comfortable Clothing</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">March in place for 3-5 minutes.</li>
+          <li data-aos="fade-up">Do hip rolls 5 times and then swap directions.</li>
+          <li data-aos="fade-up">Squat and pump your arms to the ground for 1-2 minutes.</li>
+          <li data-aos="fade-up">Do calf raises in between others.</li>
+          <li data-aos="fade-up">Try side knee crunches.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/mR9td6t5mTc"></iframe>
+        </div>
+      </div><!--moderate Div End -->
+
+
+      <div id="intermediate"><!--intermediate Div Start -->
+        <h3 data-aos="fade-up">Exercise 3 (Intermediate): Biking</h3>
+        <p data-aos="fade-up">To many, biking is a fun and effective way to
+        improve one’s endurance. Although running burns more calories, biking is
+        much easier on the body. One can bike longer and faster than they would
+        by running. It also serves as an efficient tool for local transportation.
+        If one doesn’t like biking outside or cannot, stationary bikes are also a fun option.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Bike</li>
+          <li data-aos="fade-up">comfortable clothing</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Start off pedaling at a low intensity for 5-10 minutes.</li>
+          <li data-aos="fade-up">Switch to medium intensity for 3-5 minutes.</li>
+          <li data-aos="fade-up">Alternate between high intensity (1-3 minutes) and medium intensity (3-5 minutes) for the next 20 to 30 minutes.</li>
+          <li data-aos="fade-up">Cool down by pedaling at a low intensity for 5-10 minutes.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/il5vPB3o1WM"></iframe>
+        </div><br>
+
+      </div><!--intermediate Div End -->
+
+      <div id="challenge"><!--challenge Div Start -->
+        <h3 data-aos="fade-up">Exercise 4 (Challenge): Swimming</h3>
+        <p data-aos="fade-up">Swimming is a fun and popular way to improve one’s
+        endurance. Swimming is one of the most effective exercises out there,
+        since it exercises the entire body. It is easy on the body and is recommended
+        to be done in 30 minutes on average. The exercises in the pool are quite
+        simple as well, mainly being laps around the pool. Water sports, like
+        water polo, are fun group alternatives as well. The challenging aspect
+        of swimming is having access to a pool, which normally requires going to a gym.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Pool</li>
+          <li data-aos="fade-up">Swimwear</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Begin swimming using the front crawl stroke.</li>
+          <li data-aos="fade-up">Turn at the end of the lane using an open turn, in order to not crash into the pool edge.</li>
+          <li data-aos="fade-up">Turn at the end of the lane using a flip turn to propel oneself into another lap.</li>
+          <li data-aos="fade-up">Repeat the process for 30 minutes, with 10 minutes for breaks.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/MT88DtY_7GA"></iframe>
+        </div>
+      </div><!--challenge Div End -->
+    </div>
+
+    <div class="custom-shape-divider-bottom-1616804317">
+        <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 id="left">INFO</h5>
+            <p id="info-text">Our website was created to expose students to at home
+            workouts so they can quickly exercise and still have enough time
+            to study and work on school work.</p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Workouts</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                 <a href="./balance.html" class="footer-link">Balance</a>
+              </li>
+              <li>
+                <a href="./strength.html" class="footer-link">Strength</a>
+              </li>
+              <li>
+                <a href="./flexibility.html" class="footer-link">Flexibility</a>
+              </li>
+              <li>
+                <a href="./endurance.html" class="footer-link">Endurance</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Team</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="./about-us.html#michael-owen" class="footer-link">Michael Owen</a>
+              </li>
+              <li>
+                <a href="./about-us.html#lexi-branon" class="footer-link">Lexi Branon</a>
+              </li>
+              <li>
+                <a href="./about-us.html#yulitsa-pantoja" class="footer-link">Yulitsa Pantoja</a>
+              </li>
+              <li>
+                <a href="./about-us.html#rylee-hernandez" class="footer-link">Rylee Hernandez</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </footer>
+    <!-- Footer -->
+
+  </body>
+</html>

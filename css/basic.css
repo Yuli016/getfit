@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-x: hidden;
+  @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
+}
+
+body {
+	background: linear-gradient(-45deg, #97d7c6, #BAC94A, #97D7C6, #5aa7a7);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.center-box {
+  padding: 9vh 9vw;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #6c8cbf;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline red;
+}
+
+/*h1 */
+@media screen and (min-width: 601px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+
+h2 {
+  text-align: center;
+  padding: 5px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  line-height: 150%;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 601px) {
+  p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  p {
+    font-size: 28px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.center-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  }
