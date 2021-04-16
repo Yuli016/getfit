@@ -33,10 +33,10 @@
 }
 
 #time {
-  color: white;
+  color: #6c8cbf;
   font-weight: 600;
   font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'poppins', sans-serif;
   top: 5px;
   right: 3px;
 }

@@ -24,6 +24,10 @@ body {
 	}
 }
 
+hr {
+  border: 2px solid #6c8cbf;
+}
+
 .center-box {
   padding: 9vh 9vw;
 }
@@ -31,6 +35,10 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Poppins', sans-serif;
   color: white;
+}
+
+h3,h5 {
+  color: #6c8cbf;
 }
 
 h1 {

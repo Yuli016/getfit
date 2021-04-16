@@ -65,6 +65,14 @@ h2.name {
   font-size: 0.78rem;
 }
 
+.team-link {
+  color: #5aa7a7;
+}
+
+.team-link:hover {
+  color: #6c8cbf;
+}
+
 .card {
   border-top: solid #6c8cbf 9px;
   border-bottom: solid #6c8cbf 9px;
