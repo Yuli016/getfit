@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Balance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/wavy.css">
+    <link rel="stylesheet" href="css/hide-show.css">
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <script src="js/workout.js" defer></script>
+    <script src="js/time.js" defer></script>
+    <script src="js/fade.js" defer></script>
+    <script src="js/timer.js" defer></script>
+  </head>
+  <body>
+
+    <div class="bar">
+      <a href="./homepage.html">Home</a>
+      <a href="./bmi.html">BMI</a>
+        <div class="dropbox">
+          <button class="dropbtn">Workouts</button>
+            <div class="dropbox-content" class="nav nav-tabs" id="nav-tab" role="tablist">
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button id="nav-button" class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Balance</button>
+                <button id="nav-button" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Strength</button>
+                <button id="nav-button" class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flexibility</button>
+                <button id="nav-button" class="nav-link" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Endurance</button>
+              </div>
+            </div>
+        </div>
+      <a href="./about-us.html">About Us</a>
+    </div>
+
+  <div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+    <div class="top-large-img">
+      <div class="top-right"><span id="time"></span></div>
+        <img class="background-img" src="img/header-workouts-balance.png">
+    </div>
+
+    <div class="custom-shape-divider-top-1616804317">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="center-box">
+        <h1>Benfits</h1>
+        <p data-aos="fade-up">Balance training helps reduce the risk of falls in
+        older adults with balance problems and women with low bone mass. It also
+        improves postural stability after a stroke. More research is needed to
+        identify which components of balance training do the most good and to
+        test them for preventing falls and injuries in healthy adults. So far,
+        the evidence hasn't been sufficient for an official recommendation, such
+        as the one for physical activity that most of us know (by heart!): To
+        reduce your risk for chronic disease and preserve function, get at least
+        30 minutes of moderate-intensity activity (such as brisk walking) on all or
+        most days of the week, plus resistance and flexibility exercise a couple
+        of times a week.</p><br>
+
+        <h5>Input the time in minutes</h5>
+  	    <div id="inputArea"></div>
+  		    <h2 id="timer">0:00</h2>
+
+      <h3>Select Workout Difficulty</h3><br>
+      <div class="buttons">
+        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+      </div><br><br>
+
+      <div id="beginner"><!--beginner Div Start -->
+        <h3 data-aos="fade-up">Exercise 1 (Beginner): Sumo Squat With Outer Thigh Pulse</h3>
+        <p data-aos="fade-up">A great lower-body strength exercise that emphasizes
+        the muscles of the inner thigh, as well as the glutes, quads, hamstrings, hip flexors, and calves.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Start in a wide stance, feet turned out 45 degrees.</li>
+          <li data-aos="fade-up">Bend at your knees and hips to lower into a sumo squat. Keep your torso upright.</li>
+          <li data-aos="fade-up">As you stand, extend one leg and the opposite arm. Hold and pulse your leg up 2 to 3 inches three times.</li>
+          <li data-aos="fade-up">Put your leg back down to start position and repeat.</li>
+          <li data-aos="fade-up">Alternate sides for 12 reps.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/G8RW18RQQOc"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 2 (Beginner): Standing Crunch With Under-the-Leg Clap</h3>
+        <p data-aos="fade-up">Great for practicing balance and reducing wobble.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Start balancing on one leg, with the other out in front of you, knee bent at a 90-degree angle, and your hands together overhead.</li>
+          <li data-aos="fade-up">Crunch forward and clap your hands under the raised leg.</li>
+          <li data-aos="fade-up">Continue to clap over your head and under your raised leg 12 times. Repeat on your other leg.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/Z30Pac8SmLY"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 3 (Beginner): Curtsy Lunge With Oblique Crunch</h3>
+        <p data-aos="fade-up">Stronger legs and glutes; improved balance.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with your feet hip-width apart, fingertips at your ears and elbows out wide.</li>
+          <li data-aos="fade-up">Cross one leg behind you and lower into a curtsy lunge.</li>
+          <li data-aos="fade-up">Without rotating your hips, stand and bring that same leg up to meet the same side elbow for an oblique crunch.</li>
+          <li data-aos="fade-up">Do 12 reps, and then switch legs.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/57ouEWXvxEQ"></iframe>
+        </div>
+
+      </div><!--beginner Div End -->
+
+      <div id="moderate"><!--moderate Div Start -->
+        <h3 data-aos="fade-up">Exercise 4 (Moderate): Banded Triplanar Foot Taps</h3>
+        <p data-aos="fade-up">Helps improve core and improves balance.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Resistance Band</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Place a Versa-Loop band directly above the knees and shift into a single-leg, quarter-squat position.</li>
+          <li data-aos="fade-up">While balancing on the stance leg, tap the alternate foot forward, to the side and directly behind you.</li>
+          <li data-aos="fade-up">The core and hip muscles will fire to maintain single-leg balance against the band’s resistance in three different directions. </li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/mcb_UgXGzdo"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 5 (Moderate): Single-Leg Cross-Body Punches</h3>
+        <p data-aos="fade-up">Helps improve core and improves balance.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbells</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Hold two dumbbells at chest height and move into a single-leg, quarter-squat position.</li>
+          <li data-aos="fade-up">With control, alternate “punching” the weights across the body, while maintaining stability in the stance leg.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/GKlEtRmvkHY"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 6 (Moderate): Plank With Elbows on a Stability Ball</h3>
+        <p data-aos="fade-up">Helps improve core and improves balance.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Stability Ball</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Place your elbows onto a stability ball and walk your feet out until you’re in a plank position.</li>
+          <li data-aos="fade-up">Engage the abdominals, glutes and quadriceps to maintain a stable plank pose and keep the shoulders and hips squared to the floor.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/II1ERmRMczU"></iframe>
+        </div>
+
+      </div><!--moderate Div End -->
+
+
+      <div id="intermediate"><!--intermediate Div Start -->
+        <h3 data-aos="fade-up">Exercise 7 (Intermediate): Single-Leg Deadlift With Side Bend</h3>
+        <p data-aos="fade-up">Promotes good synergy between hip hinge movement, core muscle, and shoulders.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Start by standing with feet together. Shift weight to left leg and lift right knee in
+          front of body to hip height, knee bent to 90-degree angle.</li>
+          <li data-aos="fade-up">Extend arms to side at shoulder height.</li>
+          <li data-aos="fade-up">Hinging from hips and tightening core (imagine your navel squeezing back into
+          your spine), extend right leg behind you to hip height as you reach right hand to
+          touch inside of left ankle. (Don't forget to engage both left and right glute
+          muscles)</li>
+          <li data-aos="fade-up">Release to start. Repeat eight times. Switch sides and repeat.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/tZfxXdilG_M"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 8 (Intermediate): Curtsey Lunge With Oblique Crunch</h3>
+        <p data-aos="fade-up">Stronger legs and glutes; improved balance.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with feet hip-width apart, fingertips at ears and elbows out wide.</li>
+          <li data-aos="fade-up">Cross right leg behind you and lower until back knee is about one to three
+          inches off ground (into what's called a curtsy lunge).</li>
+          <li data-aos="fade-up">Rise and return right leg up to right side (careful not to rotate the hips), bend
+            torso to right moving right elbow as close to right knee as you can (into a
+            standing oblique crunch).</li>
+          <li data-aos="fade-up">Release to start and repeat 12 times. Switch sides and repeat.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/57ouEWXvxEQ"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 9 (Intermediate): High Plank Shoulder Taps</h3>
+        <p data-aos="fade-up">Build core muscle.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Get on floor on hands and knees, hands slightly wider than shoulders.</li>
+          <li data-aos="fade-up">Extend legs behind you until you’re balancing in one long line on hands and feet
+          in high plank position. (To make it easier, bring knees down to floor like you
+          would for modified push-up position)</li>
+          <li data-aos="fade-up">Bracing your core, lift right hand off ground and tap left shoulder. Slowly
+          release hand to ground and switch sides, trying not to let weight shift as you do
+          this. Do 10 reps each side.</li>
+          <li data-aos="fade-up">Struggling to maintain balance? Position feet wider.</li>
+          <li data-aos="fade-up">For more of a challenge, bring feet together or even do exercise with one foot off ground.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/ztpXZm7Dv80"></iframe>
+        </div>
+
+      </div><!--intermediate Div End -->
+
+      <div id="challenge"><!--challenge Div Start -->
+        <h3 data-aos="fade-up">Exercise 10 (Challenge): Weighted BOSU Ball Squats</h3>
+        <p data-aos="fade-up">Excellent exercise that strengthens the quads,
+        hamstrings, glutes and by using the bosu ball this helps to stabilise the core as well.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Bosu Ball</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Place a BOSU ball in front of you with the flat side up and the round side touching the floor.</li>
+          <li data-aos="fade-up">Add weight via dumbbells, weighted vest, barbell or EZ Curl Bar.</li>
+          <li data-aos="fade-up">Step onto the BOSU ball and adjust your footing until your feet are shoulder-width apart.</li>
+          <li data-aos="fade-up">Perform a standard Squat, lowering yourself to 90 degrees, keeping your back,
+          knees and toes straight and your core tight.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/Ur0a3KwXIr4"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 11 (Challenge): Single-Leg RDL With Press</h3>
+        <p data-aos="fade-up">Increases strength in the glutes, hamstrings and lower back, Improves hip stability, Improves balance.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Weight or Dumbbell </li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Grab a dumbbell or kettlebell that is a challenging weight.</li>
+          <li data-aos="fade-up">Hold the weight in your left hand and stand on your right leg at the same time.</li>
+          <li data-aos="fade-up">Perform a Romanian Deadlift, making sure to keep your back, knee and toe straight and your core tight.</li>
+          <li data-aos="fade-up">At the top of the RDL, pause and perform a Single-Shoulder Press.</li>
+          <li data-aos="fade-up">Perform another RDL.</li>
+          <li data-aos="fade-up">Progress by performing the exercise on a BOSU ball as you get stronger.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/uKA9yvEki38"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 12 (Challenge): Leg-Elevated Bulgarian Split Squat</h3>
+        <p data-aos="fade-up">Strengthens the muscles of the legs, including the quads, hamstrings, glutes, and calves.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Place a bench or plyometric box behind you about knee-high.</li>
+          <li data-aos="fade-up">Add weight via dumbbells, weighted vest, barbell or EZ Curl Bar.</li>
+          <li data-aos="fade-up">Lift one leg up and place it on the bench or box behind you.</li>
+          <li data-aos="fade-up">Perform a Standard Split Squat, keeping your back, knee and toe straight and your core tight.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/8kKc3-2NAdM"></iframe>
+        </div>
+
+      </div><!--challenge Div End -->
+    </div>
+  </div><!--balance Div Start -->
+
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="top-large-img">
+      <div class="top-right"><span id="time"></span></div>
+      <img class="background-img" src="img/header-workouts-strength.png">
+    </div>
+
+    <div class="custom-shape-divider-top-1616804317">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="center-box">
+        <h1>Benfits</h1>
+        <p data-aos="fade-up">Strength training makes you stronger and fitter.
+        This benefit is the obvious one, but it shouldn’t be overlooked. Muscle
+        strength is crucial in making it easier to do the things you need to do
+        on a day-to-day basis, especially as we get older and naturally start to
+        lose muscle. Strength training is also called resistance training because
+        it involves strengthening and toning your muscles by contracting them
+        against a resisting force. Strength training also helps protect bone
+        health and muscle mass. At around age 30 we start losing as much as 3 to
+        5 percent of lean muscle mass per year thanks to aging. Lastly,  Strength
+        training helps keep the weight off for good.  Aerobic exercise such as
+        walking, running, and cycling is well-known as a way to help increase the
+        number of calories you burn in a day and thereby shed extra pounds. But
+        strength training helps, too (even if you’re not burning a huge number
+        of calories during the workout</p><br>
+
+        <h5>Input the time in minutes</h5>
+        <div id="inputArea"></div>
+          <h2 id="timer">0:00</h2>
+
+      <h3>Select Workout Difficulty</h3><br>
+      <div class="buttons">
+        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+      </div><br><br>
+
+      <div id="beginner"><!--beginner Div Start -->
+        <h3 data-aos="fade-up">Exercise 1 (Beginner): Squat</h3>
+        <p data-aos="fade-up">Strengthens and tones glutes.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with your feet slightly wider than hip-width apart, toes slightly turned out, arms at your sides, palms in.</li>
+          <li data-aos="fade-up">Engage your core and keep your chest lifted and back flat as you shift your
+          weight into your heels, push your hips back, and bend your knees to lower into
+          a squat. Bend your elbows and bring your palms together in front of your chest.
+          (You can also just hold your hands in front of your chest the entire time.)</li>
+          <li data-aos="fade-up">Drive through your heels to stand and squeeze your glutes at the top for 1 rep.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/xqvCmoLULNY"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 2 (Beginner): Romanian Deadlift</h3>
+        <p data-aos="fade-up">Enhance movement patterning, and even help resist injury caused by lower back stress</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with your feet hip-width apart, knees slightly bent, arms relaxed by the
+          front of your quads. This is the starting position.</li>
+          <li data-aos="fade-up">Hinge forward at your hips and bend your knees slightly as you push your butt
+          way back. Keep your back flat and shoulders engaged as you slowly lower your
+          arms along your shins toward the floor until you feel a stretch in your hamstrings.</li>
+          <li data-aos="fade-up">Keeping your core tight, push through your heels to stand up straight and
+          return to the starting position. Keep your arms close to your shins as you pull.
+          Pause at the top and squeeze your butt. That's 1 rep.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/JCXUYuzwNrM"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 3 (Beginner): Reverse Lunge</h3>
+        <p data-aos="fade-up">Strengthen glutes and core muscles.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with your feet together with your arms by your sides (or pictured) or
+          hands on your hips. This is the starting position.</li>
+          <li data-aos="fade-up">Step back (about 2 feet) with your right foot, landing on the ball of your foot and
+          keeping your heel off the floor.</li>
+          <li data-aos="fade-up">Bend both knees until your left quad and right shin are parallel to the floor, your
+          torso leaning slightly forward so your back is flat. Your left knee should be
+          above your left foot and your butt and core should be engaged.</li>
+          <li data-aos="fade-up">Push through the heel of your left foot to return to the starting position. This is 1 rep.</li>
+          <li data-aos="fade-up">You can either alternate legs each time, or do all your reps on one side before switching to the other side.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/tpVhJNQURk4"></iframe>
+        </div>
+
+      </div><!--beginner Div End -->
+
+      <div id="moderate"><!--moderate Div Start -->
+        <h3 data-aos="fade-up">Exercise 4 (Moderate): Step To shoulder Press</h3>
+        <p data-aos="fade-up">Helps strengthen shoulders and back.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand behind your bench or elevated surface with a dumbbell in each hand at shoulder level.</li>
+          <li data-aos="fade-up">Step up with your right foot, pushing through your heel and pressing the dumbbells up overhead.</li>
+          <li data-aos="fade-up">Bring the dumbbells back to shoulder level and step back down, left foot first.</li>
+          <li data-aos="fade-up">Repeat, leading with the other leg.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/qEwKCR5JCog"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 5 (Moderate): Goblet Squat</h3>
+        <p data-aos="fade-up">Helps strengthen glutes.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">To set up, grip a dumbbell vertically with both hands underneath the top of the weight.</li>
+          <li data-aos="fade-up">Position the dumbbell against your chest, and keep it in contact with your body throughout the movement.</li>
+          <li data-aos="fade-up">Stand with your feet slightly wider than shoulder-width apart and toes slightly out.</li>
+          <li data-aos="fade-up">Inhale and start to squat, sitting back in the hips, bending the knees and keeping the core tight.</li>
+          <li data-aos="fade-up">Allow the elbows to track in between the knees, stopping when your thighs are parallel to the ground.</li>
+          <li data-aos="fade-up">Push up through the heels back to the starting position.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/MeIiIdhvXT4"></iframe>
+        </div><br>
+
+        <h3 data-aos="fade-up">Exercise 6 (Moderate): Woodchop</h3>
+        <p data-aos="fade-up">Helps strengthen core and arms.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Hold a dumbbell by each end to the right side of your body.</li>
+          <li data-aos="fade-up">Squat down slightly, rotating your trunk to the right.</li>
+          <li data-aos="fade-up">Begin to stand up and, keeping your arms extended, bring the dumbbell up and across your body by twisting your torso.</li>
+          <li data-aos="fade-up">Allow your right foot to pivot as you go. The dumbbell should end up over your left shoulder.</li>
+          <li data-aos="fade-up">Twist your torso back and return the dumbbell to the starting position.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/b65s5BtdOEc"></iframe>
+        </div>
+
+      </div><!--moderate Div End -->
+
+
+      <div id="intermediate"><!--intermediate Div Start -->
+        <h3 data-aos="fade-up">Exercise 7 (Intermediate): Standing Overhead Dumbbell Press</h3>
+        <p data-aos="fade-up">Strengthen back muscles and core muscles.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Press the weights upward in an arc until they’re overhead.</li>
+          <li data-aos="fade-up">Stop just short of the dumbbells touching and return to the start position along the same arc.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/OOe_HrNnQWw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 8 (Intermediate): Bent-Over Dumbell Row</h3>
+        <p data-aos="fade-up">Builds muscle for back and shoulders.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand next to a bench and lean forward at the waist, placing your inside hand and knee on the bench for support.</li>
+          <li data-aos="fade-up">Grasp a dumbbell in your outside hand with a neutral grip and fully extend your arm toward the floor.</li>
+          <li data-aos="fade-up">Keep your low back slightly arched, chin down and head neutral.</li>
+          <li data-aos="fade-up">Pull the weight toward your hip, making sure to keep your elbow close to your body throughout the movement.</li>
+          <li data-aos="fade-up">Squeeze your back hard at the top and slowly return to the start position.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/LktGPg-AkvY"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 9 (Intermediate): Dumbbell Squat</h3>
+        <p data-aos="fade-up">Tones and strengthens glutes.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Weight</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand holding a pair of dumbbells at shoulder level, hands neutral.</li>
+          <li data-aos="fade-up">Your eyes should be forward, knees slightly bent, lower back in a slight arch.</li>
+          <li data-aos="fade-up">Push your glutes and hips back while simultaneously bending your knees, as if you were going to sit in a chair.</li>
+          <li data-aos="fade-up">Maintaining the arch in your lower back, lower to a point where
+          your thighs are parallel to the floor, then reverse the motion by pressing through your heels to return to the start position.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v_c67Omje48"></iframe>
+        </div>
+
+      </div><!--intermediate Div End -->
+
+      <div id="challenge"><!--challenge Div Start -->
+        <h3 data-aos="fade-up">Exercise 9 (Challenge): Squeeze Presses</h3>
+        <p data-aos="fade-up">Tremendous exercise for building functional strength and hypertrophy in the chest, triceps, and shoulders.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Dumbbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Lie on a bench, back flat against it, arms bent, and dumbbells held at chest
+          height, palms facing away from your face.</li>
+          <li data-aos="fade-up">Actively press the ends of the dumbbells together.</li>
+          <li data-aos="fade-up">Continue squeezing the ends together as you press the dumbbells straight up over your chest.</li>
+          <li data-aos="fade-up">Then, lower the weights with control until your elbows dip just below the height of the bench</li>
+          <li data-aos="fade-up">Push them back up to start, continuing to squeeze the ends of the dumbbells together throughout the entire movement.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/vSlGGg2s4nc"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 11 (Challenge): Back Squats With Pause</h3>
+        <p data-aos="fade-up">Builds the strength of the supporting muscles in the lower back, hips and abs.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Barbell</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">With a barbell positioned across your upper back, initiate the squat by pushing
+          your butt back and bending at the knees to lower down toward the floor</li>
+          <li data-aos="fade-up">Maintain tension as you pause in the bottom position for two to five seconds</li>
+          <li data-aos="fade-up">Drive through your heels to push back to stand</li>
+          <li data-aos="fade-up">Keep your torso upright and knees in line with your toes throughout the movement..</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/C8MYeGhmn-U"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 12 (Challenge): Forward-to-Reverse Lunges</h3>
+        <p data-aos="fade-up">Work the glutes, legs and abs, each emphasizes different leg muscles.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand tall with your feet shoulder-width apart.</li>
+          <li data-aos="fade-up">Take one large step forward with one foot and lower your hips toward the ground with control.</li>
+          <li data-aos="fade-up">Return to standing by driving through the heel of your front foot.</li>
+          <li data-aos="fade-up">Once standing, take one large step behind you with the same foot.</li>
+          <li data-aos="fade-up">Sink into your hips as you lower toward the floor.</li>
+          <li data-aos="fade-up">Then, driving through the heel of your front foot, stand back up.</li>
+          <li data-aos="fade-up">Complete all repetitions on one side before switching legs.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/WlGj3ABffAw"></iframe>
+        </div>
+
+      </div><!--challenge Div End -->
+    </div>
+  </div><!--strength Div End -->
+
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <div class="top-large-img">
+      <div class="top-right"><span id="time"></span></div>
+      <img class="background-img" src="img/header-workouts-flex.png">
+    </div>
+
+    <div class="custom-shape-divider-top-1616804317">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="center-box">
+        <h1>Benfits</h1>
+        <p data-aos="fade-up">The idea of being flexible can easily be overlooked
+        in terms of one’s physical health. Much like other aspects, flexibility
+        has many health benefits. One such benefit is lowering the chance of injuring
+        yourself during some of these other workouts. Developed flexibility allows
+        the body to withstand more physical demand. With this, one’s body will also
+        feel less sore and unlikely to experience muscle cramps. Another benefit is
+        improved balance and posture. Improving flexibility extends the body’s range
+        of motion and promotes a better posture. One’s overall strength and physical
+        performance is also improved with better flexibility. Improved flexibility
+        results in making muscles work more efficiently, leading in improved strength.
+        A commonly forgotten benefit of better flexibility is an improved state of mind.
+        Being able to stretch effectively promotes relaxation which can help with winding
+        down. With these exercises, one could improve their flexibility and achieve these benefits.</p>
+
+        <h5>Input the time in minutes</h5>
+        <div id="inputArea"></div>
+          <h2 id="timer">0:00</h2>
+
+      <h3>Select Workout Difficulty</h3><br>
+      <div class="buttons">
+        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+      </div><br><br>
+
+      <div id="beginner"><!--beginner Div Start -->
+        <h3 data-aos="fade-up">Exercise 1 (Beginner): Shoulder Roles</h3>
+        <p data-aos="fade-up">This exercise is performed by rotating one’s shoulders
+        in big circles. This is performed while standing and interchanging between
+        clockwise and counterclockwise motions. Shoulder Roles promotes flexibility
+        in the shoulder area and can also reduce tension in the neck.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with the feet hip-width apart.</li>
+          <li data-aos="fade-up">Let the arms hang down at the sides of the body.</li>
+          <li data-aos="fade-up">Breathe in and lift the shoulders up toward the ears.</li>
+          <li data-aos="fade-up">Move the shoulders back, squeezing the shoulder blades together.</li>
+          <li data-aos="fade-up">Exhale and drop the shoulders back.</li>
+          <li data-aos="fade-up">Move the elbows forward, feeling the stretch at the back of the shoulders.</li>
+          <li data-aos="fade-up">Repeat this 10 times.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/jJfKEXzoh0w"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 2 (Beginner): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 3 (Beginner):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+
+      </div><!--beginner Div End -->
+
+      <div id="moderate"><!--moderate Div Start -->
+        <h3 data-aos="fade-up">Exercise 4 (Moderate): The Seated Butterfly</h3>
+        <p data-aos="fade-up">This exercise is beneficial for anyone at any level
+        of exercise, including beginners. The Butterfly involves sitting on the
+        floor and stretching one’s legs. This exercise targets the lower body.
+        It helps relieve tightness in the hip region and promotes leg flexibility.
+        It is recommended to start off your day with this exercise or to cap off
+        a strenuous workout with it. It may be difficult to achieve proper form
+        early on, but with repetition one’s form will improve over time.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Sit on the floor or a prop with the soles of your feet pressing into each other.</li>
+          <li data-aos="fade-up">To deepen the intensity, move your feet closer in toward your hips.</li>
+          <li data-aos="fade-up">Root down into your legs and sitting bones.</li>
+          <li data-aos="fade-up">Elongate and straighten your spine, tucking your chin in toward your chest.</li>
+          <li data-aos="fade-up">With each inhale, lengthen your spine and feel the line of energy extending out through the top of your head.</li>
+          <li data-aos="fade-up">With each exhale, fall heavy into the floor and relax or sink a bit more deeply into the stretch.</li>
+          <li data-aos="fade-up">Hold this position for up to 2 minutes.</li>
+          <li data-aos="fade-up">Repeat 2 to 4 times.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/sQ1CuSFp14A"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 5 (Moderate): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 6 (Moderate):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+
+      </div><!--moderate Div End -->
+
+
+      <div id="intermediate"><!--intermediate Div Start -->
+        <h3 data-aos="fade-up">Exercise 7 (Intermediate): Lunges</h3>
+        <p data-aos="fade-up">Lunges are a great exercise to improve one’s flexibility.
+        These are performed by standing and making one’s leg reach a 90-degree angle.
+        This exercise improves one’s abdominal region, core, glutes and legs.
+        Lunges are important since the areas the exercise targets tend to be
+        under utilized, so they will be challenging to perform at first.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Start by standing up tall.</li>
+          <li data-aos="fade-up">Step forward with one foot until your leg reaches a 90-degree angle. ...</li>
+          <li data-aos="fade-up">Lift your front lunging leg to return to the starting position.</li>
+          <li data-aos="fade-up">Repeat 10 to 12 reps on one leg, or switch off between legs until you've totaled 10 to 12 reps per leg.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/THP-LSo9ko8"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 8 (Intermediate): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 9 (Intermediate):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+
+      </div><!--intermediate Div End -->
+
+      <div id="challenge"><!--challenge Div Start -->
+        <h3 data-aos="fade-up">Exercise 10 (Challenge): Standing Forward Bend:</h3>
+        <p data-aos="fade-up">The Standing Forward Bend is an exercise where one
+        stretches their upper body down to their lower body while standing. This
+        technique is a more developed version of touching one’s toes for stretching.
+        This stretches the hamstrings, calves and hips. It also strengthens one’s
+        thighs and knees. This bend requires caution and slow progression to someone
+        just starting out their flexibility exercises. With practice, it will
+        prompt one’s flexibility greatly.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Stand with your feet together.</li>
+          <li data-aos="fade-up">Place your hands next to your feet or on the ground in front of you.</li>
+          <li data-aos="fade-up">Inhale and extend your chest to lengthen your spine.</li>
+          <li data-aos="fade-up">Exhale and gently press both legs toward straight.</li>
+          <li data-aos="fade-up">On an exhalation, extend your torso down without rounding your back.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/0KzyEgkq7zw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 11 (Challenge): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 12 (Challenge):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">None</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+
+      </div><!--challenge Div End -->
+    </div>
+  </div><!--flexibility Div End -->
+
+  <div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab">
+    <div class="custom-shape-divider-top-1616804317">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="center-box">
+        <h1>Benfits</h1>
+        <p data-aos="fade-up">Endurance is an important aspect for one’s physical
+        health. The body’s overall endurance dictates how long it is able to
+        withstand physical activity for a period of time. One can improve their
+        endurance though specific exercises. Endurance training is generally
+        related to aerobic exercises. These are exercises that require lots of
+        moving and breathing, like running or swimming. There are many benefits
+        with having good endurance. One benefit is having more energy for daily
+        activities. With endurance training, one will feel less winded from physical
+        activity. It also prompts good cardiovascular health. The breathing and
+        increase in blood flow works wonders for the body. Endurance exercises
+        are also some of the most effective ways to lose weight. These exercises
+        increase one’s metabolism, which results in the body burning more calories.
+        Endurance training is also good at preventing and controlling diabetes.
+        These exercises help keep our glucose levels within a safe count. With
+        all of these benefits, some of these simple exercises can do wonders
+        for one’s body.</p><br>
+
+        <h5>Input the time in minutes</h5>
+        <div id="inputArea"></div>
+          <h2 id="timer">0:00</h2>
+
+      <h3>Select Workout Difficulty</h3><br>
+      <div class="buttons">
+        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+      </div><br><br>
+
+      <div id="beginner"><!--beginner Div Start -->
+        <h3 data-aos="fade-up">Exercise 1 (Beginner): Walking and Jogging</h3>
+        <p data-aos="fade-up">Walking or jogging are some of the most popular
+        ways to exercise and increase endurance. Both walking and jogging are
+        effective for improving endurance, the choice of which to do is really
+        up to the individual. This activity can be achieved by going outside or
+        utilizing a treadmill. While doing these activities, it is recommended
+        to have good running shoes and to dress light/comfortably. These exercises
+        are great for having multiple ways of being executed.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Treadmill (Optional)</li>
+          <li data-aos="fade-up">Running Shoes</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Train three days a week.</li>
+          <li data-aos="fade-up">Jog or run/walk 20 to 30 minutes, two days a week.</li>
+          <li data-aos="fade-up">Take a longer run or run/walk (40 minutes to an hour) on the weekend.</li>
+          <li data-aos="fade-up">Rest or cross-train on your off days.</li>
+          <li data-aos="fade-up">Run at a conversational pace.</li>
+          <li data-aos="fade-up">Consider taking regular walk-breaks.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/l-7V2Eh5Kbk"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 2 (Beginner): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 3 (Beginner):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+      </div><!--beginner Div End -->
+
+      <div id="moderate"><!--moderate Div Start -->
+        <h3 data-aos="fade-up">Exercise 4 (Moderate): Dancing</h3>
+        <p data-aos="fade-up">To many, dancing is a fun way to improve endurance.
+        Dancing is quite gentle on one’s body, meaning that they can do it for
+        long periods of time without feeling sore or fatigued.One can dance on
+        their own, with friends or even with some video games. Finding fun, high
+        speed music is a popular technique to help motivate one to dance. Games,
+        like Just Dance, are a great way to start if one is self conscious.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Comfortable Clothing</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">March in place for 3-5 minutes.</li>
+          <li data-aos="fade-up">Do hip rolls 5 times and then swap directions.</li>
+          <li data-aos="fade-up">Squat and pump your arms to the ground for 1-2 minutes.</li>
+          <li data-aos="fade-up">Do calf raises in between others.</li>
+          <li data-aos="fade-up">Try side knee crunches.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/mR9td6t5mTc"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 5 (Moderate): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 6 (Moderate):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+      </div><!--moderate Div End -->
+
+
+      <div id="intermediate"><!--intermediate Div Start -->
+        <h3 data-aos="fade-up">Exercise 7 (Intermediate): Biking</h3>
+        <p data-aos="fade-up">To many, biking is a fun and effective way to
+        improve one’s endurance. Although running burns more calories, biking is
+        much easier on the body. One can bike longer and faster than they would
+        by running. It also serves as an efficient tool for local transportation.
+        If one doesn’t like biking outside or cannot, stationary bikes are also a fun option.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Bike</li>
+          <li data-aos="fade-up">comfortable clothing</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Start off pedaling at a low intensity for 5-10 minutes.</li>
+          <li data-aos="fade-up">Switch to medium intensity for 3-5 minutes.</li>
+          <li data-aos="fade-up">Alternate between high intensity (1-3 minutes) and medium intensity (3-5 minutes) for the next 20 to 30 minutes.</li>
+          <li data-aos="fade-up">Cool down by pedaling at a low intensity for 5-10 minutes.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/il5vPB3o1WM"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 8 (Intermediate): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 9 (Intermediate):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+
+      </div><!--intermediate Div End -->
+
+      <div id="challenge"><!--challenge Div Start -->
+        <h3 data-aos="fade-up">Exercise 10 (Challenge): Swimming</h3>
+        <p data-aos="fade-up">Swimming is a fun and popular way to improve one’s
+        endurance. Swimming is one of the most effective exercises out there,
+        since it exercises the entire body. It is easy on the body and is recommended
+        to be done in 30 minutes on average. The exercises in the pool are quite
+        simple as well, mainly being laps around the pool. Water sports, like
+        water polo, are fun group alternatives as well. The challenging aspect
+        of swimming is having access to a pool, which normally requires going to a gym.</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">Pool</li>
+          <li data-aos="fade-up">Swimwear</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">Begin swimming using the front crawl stroke.</li>
+          <li data-aos="fade-up">Turn at the end of the lane using an open turn, in order to not crash into the pool edge.</li>
+          <li data-aos="fade-up">Turn at the end of the lane using a flip turn to propel oneself into another lap.</li>
+          <li data-aos="fade-up">Repeat the process for 30 minutes, with 10 minutes for breaks.</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/MT88DtY_7GA"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 11 (Challenge): </h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div><br>
+
+        <hr><br>
+
+        <h3 data-aos="fade-up">Exercise 12 (Challenge):</h3>
+        <p data-aos="fade-up">...</p>
+
+        <h3 data-aos="fade-up">Equiment Required</h3>
+        <ul>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ul><br>
+
+        <h3 data-aos="fade-up">Instructions</h3>
+        <ol>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+          <li data-aos="fade-up">...</li>
+        </ol><br>
+
+        <h3 data-aos="fade-up">Tutorials</h3>
+        <div class="video-container">
+          <iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/v4coxDl_avw"></iframe>
+        </div>
+
+      </div><!--challenge Div End -->
+    </div>
+  </div>
+
+    <div class="custom-shape-divider-bottom-1616804317">
+        <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 id="left">INFO</h5>
+            <p id="info-text">Our website was created to expose students to at
+            home workouts so they can quickly exercise and still have enough
+            time to study and work on school work.</p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Workouts</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                 <a href="./balance.html" class="footer-link">Balance</a>
+              </li>
+              <li>
+                <a href="./strength.html" class="footer-link">Strength</a>
+              </li>
+              <li>
+                <a href="./flexibility.html" class="footer-link">Flexibility</a>
+              </li>
+              <li>
+                <a href="./endurance.html" class="footer-link">Endurance</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Team</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="./about-us.html#michael-owen" class="footer-link">Michael Owen</a>
+              </li>
+              <li>
+                <a href="./about-us.html#lexi-branon" class="footer-link">Lexi Branon</a>
+              </li>
+              <li>
+                <a href="./about-us.html#yulitsa-pantoja" class="footer-link">Yulitsa Pantoja</a>
+              </li>
+              <li>
+                <a href="./about-us.html#rylee-hernandez" class="footer-link">Rylee Hernandez</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </footer>
+    <!-- Footer -->
+
+  </body>
+</html>
