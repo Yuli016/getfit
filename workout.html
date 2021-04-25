@@ -2,12 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Balance</title>
+    <title>Workouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@700&display=swap" rel="stylesheet">
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/basic.css">
@@ -28,12 +27,12 @@
       <a href="./bmi.html">BMI</a>
         <div class="dropbox">
           <button class="dropbtn">Workouts</button>
-            <div class="dropbox-content" class="nav nav-tabs" id="nav-tab" role="tablist">
+            <div class="dropbox-content" class="nav-tabs" id="nav-tab" role="tablist">
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button id="nav-button" class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Balance</button>
-                <button id="nav-button" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Strength</button>
-                <button id="nav-button" class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flexibility</button>
-                <button id="nav-button" class="nav-link" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Endurance</button>
+                <a class="active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Balance</a>
+                <a id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Strength</a>
+                <a id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flexibility</a>
+                <a id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Endurance</a>
               </div>
             </div>
         </div>
@@ -414,13 +413,13 @@
 
       <h3>Select Workout Difficulty</h3><br>
       <div class="buttons">
-        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
-        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
-        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
-        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+        <button class="workout-button" onclick="toggleVisibility('beginner2');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate2');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate2');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge2');">Challenge</button>
       </div><br><br>
 
-      <div id="beginner"><!--beginner Div Start -->
+      <div id="beginner2"><!--beginner Div Start -->
         <h3 data-aos="fade-up">Exercise 1 (Beginner): Squat</h3>
         <p data-aos="fade-up">Strengthens and tones glutes.</p>
 
@@ -501,7 +500,7 @@
 
       </div><!--beginner Div End -->
 
-      <div id="moderate"><!--moderate Div Start -->
+      <div id="moderate2"><!--moderate Div Start -->
         <h3 data-aos="fade-up">Exercise 4 (Moderate): Step To shoulder Press</h3>
         <p data-aos="fade-up">Helps strengthen shoulders and back.</p>
 
@@ -573,7 +572,7 @@
       </div><!--moderate Div End -->
 
 
-      <div id="intermediate"><!--intermediate Div Start -->
+      <div id="intermediate2"><!--intermediate Div Start -->
         <h3 data-aos="fade-up">Exercise 7 (Intermediate): Standing Overhead Dumbbell Press</h3>
         <p data-aos="fade-up">Strengthen back muscles and core muscles.</p>
 
@@ -643,7 +642,7 @@
 
       </div><!--intermediate Div End -->
 
-      <div id="challenge"><!--challenge Div Start -->
+      <div id="challenge2"><!--challenge Div Start -->
         <h3 data-aos="fade-up">Exercise 9 (Challenge): Squeeze Presses</h3>
         <p data-aos="fade-up">Tremendous exercise for building functional strength and hypertrophy in the chest, triceps, and shoulders.</p>
 
@@ -757,13 +756,13 @@
 
       <h3>Select Workout Difficulty</h3><br>
       <div class="buttons">
-        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
-        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
-        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
-        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+        <button class="workout-button" onclick="toggleVisibility('beginner3');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate3');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate3');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge3');">Challenge</button>
       </div><br><br>
 
-      <div id="beginner"><!--beginner Div Start -->
+      <div id="beginner3"><!--beginner Div Start -->
         <h3 data-aos="fade-up">Exercise 1 (Beginner): Shoulder Roles</h3>
         <p data-aos="fade-up">This exercise is performed by rotating one’s shoulders
         in big circles. This is performed while standing and interchanging between
@@ -845,7 +844,7 @@
 
       </div><!--beginner Div End -->
 
-      <div id="moderate"><!--moderate Div Start -->
+      <div id="moderate3"><!--moderate Div Start -->
         <h3 data-aos="fade-up">Exercise 4 (Moderate): The Seated Butterfly</h3>
         <p data-aos="fade-up">This exercise is beneficial for anyone at any level
         of exercise, including beginners. The Butterfly involves sitting on the
@@ -932,7 +931,7 @@
       </div><!--moderate Div End -->
 
 
-      <div id="intermediate"><!--intermediate Div Start -->
+      <div id="intermediate3"><!--intermediate Div Start -->
         <h3 data-aos="fade-up">Exercise 7 (Intermediate): Lunges</h3>
         <p data-aos="fade-up">Lunges are a great exercise to improve one’s flexibility.
         These are performed by standing and making one’s leg reach a 90-degree angle.
@@ -1012,7 +1011,7 @@
 
       </div><!--intermediate Div End -->
 
-      <div id="challenge"><!--challenge Div Start -->
+      <div id="challenge3"><!--challenge Div Start -->
         <h3 data-aos="fade-up">Exercise 10 (Challenge): Standing Forward Bend:</h3>
         <p data-aos="fade-up">The Standing Forward Bend is an exercise where one
         stretches their upper body down to their lower body while standing. This
@@ -1098,6 +1097,12 @@
   </div><!--flexibility Div End -->
 
   <div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab">
+
+    <div class="top-large-img">
+      <div class="top-right"><span id="time"></span></div>
+      <img class="background-img" src="img/header-workouts-endurance.png">
+    </div>
+
     <div class="custom-shape-divider-top-1616804317">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -1131,13 +1136,13 @@
 
       <h3>Select Workout Difficulty</h3><br>
       <div class="buttons">
-        <button class="workout-button" onclick="toggleVisibility('beginner');">Beginner</button>
-        <button class="workout-button" onclick="toggleVisibility('moderate');">Moderate</button>
-        <button class="workout-button" onclick="toggleVisibility('intermediate');">Intermediate</button>
-        <button class="workout-button" onclick="toggleVisibility('challenge');">Challenge</button>
+        <button class="workout-button" onclick="toggleVisibility('beginner4');">Beginner</button>
+        <button class="workout-button" onclick="toggleVisibility('moderate4');">Moderate</button>
+        <button class="workout-button" onclick="toggleVisibility('intermediate4');">Intermediate</button>
+        <button class="workout-button" onclick="toggleVisibility('challenge4');">Challenge</button>
       </div><br><br>
 
-      <div id="beginner"><!--beginner Div Start -->
+      <div id="beginner4"><!--beginner Div Start -->
         <h3 data-aos="fade-up">Exercise 1 (Beginner): Walking and Jogging</h3>
         <p data-aos="fade-up">Walking or jogging are some of the most popular
         ways to exercise and increase endurance. Both walking and jogging are
@@ -1221,7 +1226,7 @@
         </div>
       </div><!--beginner Div End -->
 
-      <div id="moderate"><!--moderate Div Start -->
+      <div id="moderate4"><!--moderate Div Start -->
         <h3 data-aos="fade-up">Exercise 4 (Moderate): Dancing</h3>
         <p data-aos="fade-up">To many, dancing is a fun way to improve endurance.
         Dancing is quite gentle on one’s body, meaning that they can do it for
@@ -1303,7 +1308,7 @@
       </div><!--moderate Div End -->
 
 
-      <div id="intermediate"><!--intermediate Div Start -->
+      <div id="intermediate4"><!--intermediate Div Start -->
         <h3 data-aos="fade-up">Exercise 7 (Intermediate): Biking</h3>
         <p data-aos="fade-up">To many, biking is a fun and effective way to
         improve one’s endurance. Although running burns more calories, biking is
@@ -1384,7 +1389,7 @@
 
       </div><!--intermediate Div End -->
 
-      <div id="challenge"><!--challenge Div Start -->
+      <div id="challenge4"><!--challenge Div Start -->
         <h3 data-aos="fade-up">Exercise 10 (Challenge): Swimming</h3>
         <p data-aos="fade-up">Swimming is a fun and popular way to improve one’s
         endurance. Swimming is one of the most effective exercises out there,

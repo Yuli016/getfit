@@ -2,6 +2,18 @@
   display: none;
 }
 
+#beginner2, #moderate2, #intermediate2, #challenge2 {
+  display: none;
+}
+
+#beginner3, #moderate3, #intermediate3, #challenge3 {
+  display: none;
+}
+
+#beginner4, #moderate4, #intermediate4, #challenge4 {
+  display: none;
+}
+
 .button {
   border: none;
   color: white;
