@@ -49,7 +49,7 @@
     if (bmi < 18.5) {
       results.innerHTML = bmi + " You are underweight";
     } else if (bmi < 25) {
-      results.innerHTML = bmi + " You are Normal weight";
+      results.innerHTML = bmi + " You are normal weight";
     } else if (bmi < 30) {
       results.innerHTML = bmi + " You are over weight";
     } else if (bmi < 35) {

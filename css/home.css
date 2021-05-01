@@ -97,10 +97,6 @@ h4.activity {
   }
 }
 
-a.activity {
-  color: #5aa7a7;
-}
-
-a.activity:hover {
+h4.activity {
   color: #6c8cbf;
 }
