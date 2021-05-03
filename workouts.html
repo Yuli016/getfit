@@ -30,7 +30,7 @@
             <div class="dropbox-content" class="nav-tabs" id="nav-tab" role="tablist">
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Balance</a>
-                <a id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Strength</a>
+                <a onclick="toggleVisibility('time2');" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Strength</a>
                 <a id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Flexibility</a>
                 <a id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Endurance</a>
               </div>
@@ -40,10 +40,11 @@
     </div>
 
   <div class="tab-content" id="nav-tabContent">
+
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
     <div class="top-large-img">
-      <div class="top-right"><span id="time"></span></div>
+        <div class="top-right"><span id="time"></span></div>
         <img class="background-img" src="img/header-workouts-balance.png">
     </div>
 
@@ -374,7 +375,7 @@
 
       </div><!--challenge Div End -->
     </div>
-  </div><!--balance Div Start -->
+  </div><!--balance Div End -->
 
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
     <div class="top-large-img">
@@ -1472,7 +1473,7 @@
 
       </div><!--challenge Div End -->
     </div>
-  </div>
+  </div><!--endurance Div End -->
 
     <div class="custom-shape-divider-bottom-1616804317">
         <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
