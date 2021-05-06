@@ -25,10 +25,7 @@ var intervalHandle;
 				resetPage();
 			}
 			mySeconds--;
-
-
 		}
-
 
 	function startCounter(){
 		var myInput=document.getElementById("minutes").value;

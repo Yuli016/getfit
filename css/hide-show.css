@@ -14,6 +14,10 @@
   display: none;
 }
 
+/* #balance, #strength, #flexibility, #endurance {
+  display: block;
+} */
+
 .button {
   border: none;
   color: white;
