@@ -2,7 +2,7 @@
 
   var divs = ["beginner", "moderate", "intermediate", "challenge", "beginner2", "moderate2",
   "intermediate2", "challenge2", "beginner3", "moderate3", "intermediate3", "challenge3",
-  "beginner4", "moderate4", "intermediate4", "challenge4", "balance", "strength", "flexibility", "endurance"];
+  "beginner4", "moderate4", "intermediate4", "challenge4"];
   var visibleDivId = null;
 
   function toggleVisibility(divId) {
