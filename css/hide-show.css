@@ -14,10 +14,6 @@
   display: none;
 }
 
-/* #balance, #strength, #flexibility, #endurance {
-  display: block;
-} */
-
 .button {
   border: none;
   color: white;
@@ -70,7 +66,7 @@
   }
 }
 
-#timer {
+#timer,#timer2,#timer3,#timer4 {
   position: sticky;
   top: 0;
   z-index: 100;
